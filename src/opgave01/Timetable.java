@@ -1,5 +1,7 @@
 package opgave01;
 
+import java.time.LocalTime;
+
 public class Timetable {
     public static void main(String[] args) {
         Departure[] departures = getDepartures();
@@ -18,14 +20,14 @@ public class Timetable {
 
     private static Departure[] getDepartures() {
         Departure[] departures = new Departure[8];
-        departures[0] = new Departure(1, "København H", "07:57", "08:04");
-        departures[1] = new Departure(2, "Aalborg", "08:03", "08:10");
-        departures[2] = new Departure(1, "København H", "08:32", "08:40");
-        departures[3] = new Departure(2, "Skjern", "08:46", "08:52");
-        departures[4] = new Departure(1, "København H", "08:57", "09:04");
-        departures[5] = new Departure(2, "Aalborg", "09:03", "09:10");
-        departures[6] = new Departure(1, "København H", "09:32", "09:40");
-        departures[7] = new Departure(2, "Skjern", "09:46", "09:52");
+        departures[0] = new Departure(1, "København H", LocalTime.of(7,57), LocalTime.of(8,4));
+        departures[1] = new Departure(2, "Aalborg", LocalTime.of(8,3), LocalTime.of(8,10));
+        departures[2] = new Departure(1, "København H", LocalTime.of(8,32), LocalTime.of(8,40));
+        departures[3] = new Departure(2, "Skjern", LocalTime.of(8,46), LocalTime.of(8,52));
+        departures[4] = new Departure(1, "København H", LocalTime.of(8,57), LocalTime.of(9,4));
+        departures[5] = new Departure(2, "Aalborg", LocalTime.of(9,3), LocalTime.of(9,10));
+        departures[6] = new Departure(1, "København H", LocalTime.of(9,32), LocalTime.of(9,40));
+        departures[7] = new Departure(2, "Skjern", LocalTime.of(9,46), LocalTime.of(9,52));
 
         return departures;
     }

@@ -10,10 +10,10 @@ public class Dnd {
     }
 
     public static void fight(Hero hero, Monster monster) {
-        while (hero.lifePoints > 0 && monster.lifePoints > 0) {
+        while (hero.getLifePoints() > 0 && monster.getLifePoints() > 0) {
             int roll = rollD100();
             hero.attacks(roll, monster);
-            if (monster.lifePoints > 0) {
+            if (monster.getLifePoints() > 0) {
                 roll = rollD100();
                 monster.attacks(roll, hero);
             }
